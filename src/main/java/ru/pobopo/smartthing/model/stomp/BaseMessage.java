@@ -14,6 +14,7 @@ import java.util.UUID;
 public class BaseMessage {
     private UUID id;
     private GatewayMessageType type;
+    private boolean needResponse = false;
 
     public BaseMessage(GatewayMessageType type) {
         this.type = type;
