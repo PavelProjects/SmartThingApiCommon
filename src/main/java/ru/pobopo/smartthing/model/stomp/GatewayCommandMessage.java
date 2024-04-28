@@ -10,14 +10,14 @@ import java.util.Map;
 @Setter
 @ToString(callSuper = true)
 public class GatewayCommandMessage extends BaseMessage {
-    private String command;
+    private GatewayCommand command;
     private Map<String, Object> parameters;
 
     public GatewayCommandMessage() {
         super(GatewayMessageType.GATEWAY_COMMAND);
     }
 
-    public GatewayCommandMessage(String command, Map<String, Object> parameters) {
+    public GatewayCommandMessage(GatewayCommand command, Map<String, Object> parameters) {
         super(GatewayMessageType.GATEWAY_COMMAND);
         this.command = command;
         this.parameters = parameters;
