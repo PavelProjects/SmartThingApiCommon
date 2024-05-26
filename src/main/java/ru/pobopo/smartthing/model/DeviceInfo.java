@@ -11,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(of = {"ip", "name", "type"})
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Schema(description = "Device information")
 public class DeviceInfo {
@@ -44,30 +45,5 @@ public class DeviceInfo {
                 .name(splited[2])
                 .version(splited[3]);
         return builder.build();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-
-        if (obj == null || obj.getClass() != getClass()) {
-            return false;
-        }
-
-        DeviceInfo comp = (DeviceInfo) obj;
-        return StringUtils.equals(comp.getIp(), getIp())
-                && StringUtils.equals(comp.getName(), getName());
-        // do i need this check?
-//                && StringUtils.equals(comp.getType(), getType());
-    }
-
-    @Override
-    public int hashCode() {
-        int hashCode = ip.hashCode();
-        hashCode = 31 * hashCode + name.hashCode();
-//        hashCode = 31 * hashCode + type.hashCode();
-        return hashCode;
     }
 }

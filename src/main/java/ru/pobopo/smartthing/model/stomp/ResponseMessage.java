@@ -12,6 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+// todo make generic
 public class ResponseMessage {
     private UUID requestId;
     private InternalHttpResponse response;
