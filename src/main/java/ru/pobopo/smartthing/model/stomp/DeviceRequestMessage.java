@@ -11,10 +11,10 @@ public class DeviceRequestMessage extends BaseMessage {
     private DeviceRequest request;
 
     public DeviceRequestMessage() {
-        super(GatewayMessageType.DEVICE_REQUEST);
+        super(MessageType.DEVICE_REQUEST);
     }
     public DeviceRequestMessage(DeviceRequest request) {
-        super(GatewayMessageType.DEVICE_REQUEST);
+        super(MessageType.DEVICE_REQUEST);
         this.request = request;
     }
 }

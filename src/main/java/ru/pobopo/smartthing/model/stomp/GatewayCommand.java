@@ -6,8 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 @Getter
 public enum GatewayCommand {
     LOGOUT("logout"),
-    PING("ping"),
-    REQUEST("request");
+    PING("ping");
 
     private final String name;
     GatewayCommand(String name) {

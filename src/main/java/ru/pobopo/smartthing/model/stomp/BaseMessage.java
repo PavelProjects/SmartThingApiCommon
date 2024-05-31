@@ -13,10 +13,10 @@ import java.util.UUID;
 @AllArgsConstructor
 public class BaseMessage {
     private UUID id;
-    private GatewayMessageType type;
+    private MessageType type;
     private boolean needResponse = true;
 
-    public BaseMessage(GatewayMessageType type) {
+    public BaseMessage(MessageType type) {
         this.type = type;
     }
 }

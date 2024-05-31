@@ -14,11 +14,11 @@ public class GatewayCommandMessage extends BaseMessage {
     private Map<String, Object> parameters;
 
     public GatewayCommandMessage() {
-        super(GatewayMessageType.GATEWAY_COMMAND);
+        super(MessageType.GATEWAY_COMMAND);
     }
 
     public GatewayCommandMessage(GatewayCommand command, Map<String, Object> parameters) {
-        super(GatewayMessageType.GATEWAY_COMMAND);
+        super(MessageType.GATEWAY_COMMAND);
         this.command = command;
         this.parameters = parameters;
     }
