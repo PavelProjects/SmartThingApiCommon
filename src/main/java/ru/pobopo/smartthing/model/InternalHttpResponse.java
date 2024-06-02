@@ -4,16 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatusCode;
 
 import java.io.Serializable;
-import java.util.Map;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class InternalHttpResponse implements Serializable {
-    private int status;
+    private HttpStatusCode status;
     private String data;
-    private Map<String, String> headers;
+    private HttpHeaders headers;
 }
