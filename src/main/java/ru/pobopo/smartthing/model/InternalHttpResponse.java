@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 
 import java.io.Serializable;
@@ -15,11 +14,11 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class InternalHttpResponse implements Serializable {
-    private HttpStatusCode status;
+    private int status;
     private String data;
     private HttpHeaders headers;
 
     public ResponseEntity<String> toResponseEntity() {
-        return new ResponseEntity<String>(data, headers, status);
+        return new ResponseEntity<>(data, headers, status);
     }
 }
