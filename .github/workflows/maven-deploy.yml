@@ -17,14 +17,5 @@ jobs:
         with:
           java-version: '17'
           distribution: 'corretto'
-      - name: Generate maven settings
-        uses: s4u/maven-settings-action@v2.6.0
-        with:
-          servers: |
-            [{
-              "id": "reposilite",
-              "username": "${{ secrets.MAVEN_NAME }}",
-              "password": "${{ secrets.MAVEN_SECRET }}"
-            }]
       - name: Build with Maven
-        run: mvn deploy
+        run: mvn compile

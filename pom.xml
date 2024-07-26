@@ -51,10 +51,4 @@
       <version>2.0.13</version>
     </dependency>
   </dependencies>
-  <distributionManagement>
-    <repository>
-      <id>reposilite</id>
-      <url>http://79.133.183.141:9090/releases</url>
-    </repository>
-  </distributionManagement>
 </project>
