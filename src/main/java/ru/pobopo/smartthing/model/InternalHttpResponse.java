@@ -1,5 +1,6 @@
 package ru.pobopo.smartthing.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,6 +16,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class InternalHttpResponse implements Serializable {
+    @JsonSerialize(using = HttpStatusCodeSerializer.class)
     private HttpStatusCode status;
     private String data;
     private HttpHeaders headers;

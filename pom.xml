@@ -4,7 +4,7 @@
 
   <groupId>ru.pobopo</groupId>
   <artifactId>smart_thing_api_common</artifactId>
-  <version>1.5.2</version>
+  <version>1.5.3</version>
   <packaging>jar</packaging>
 
   <name>smart_thing_api_common</name>
@@ -37,6 +37,11 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
+      <version>2.15.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
       <version>2.15.2</version>
     </dependency>
     <dependency>
