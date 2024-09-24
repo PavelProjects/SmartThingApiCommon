@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.http.ResponseEntity;
+import ru.pobopo.smartthing.model.InternalHttpResponse;
 
 import java.util.UUID;
 
@@ -14,7 +14,7 @@ import java.util.UUID;
 @Builder
 public class ResponseMessage {
     private UUID requestId;
-    private ResponseEntity<String> data;
+    private InternalHttpResponse data;
     private String error;
     private String stack;
     private boolean success = true;
