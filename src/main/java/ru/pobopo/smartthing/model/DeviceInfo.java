@@ -15,6 +15,8 @@ import org.apache.commons.lang3.StringUtils;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Schema(description = "Device information")
 public class DeviceInfo {
+    @Schema(description = "Device board name", example = "esp32")
+    private String board;
     @Schema(description = "Ip in local network")
     private String ip;
     @Schema(description = "Device type", example = "lamp")
@@ -35,7 +37,7 @@ public class DeviceInfo {
         }
 
         String[] splited = message.split("[$]");
-        if (splited.length != 4) {
+        if (splited.length < 4) {
             return null;
         }
 
@@ -44,6 +46,10 @@ public class DeviceInfo {
                 .type(splited[1])
                 .name(splited[2])
                 .version(splited[3]);
+        // todo remove after all devices update
+        if (splited.length == 5) {
+            builder.board(splited[4]);
+        }
         return builder.build();
     }
 }
