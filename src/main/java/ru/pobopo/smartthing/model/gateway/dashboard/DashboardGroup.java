@@ -20,5 +20,6 @@ public class DashboardGroup {
     private UUID id;
     private DeviceInfo device;
     private List<DashboardObservable> observables = new ArrayList<>();
+    private List<String> actions = new ArrayList<>();
     private DashboardGroupConfig config = new DashboardGroupConfig();
 }
