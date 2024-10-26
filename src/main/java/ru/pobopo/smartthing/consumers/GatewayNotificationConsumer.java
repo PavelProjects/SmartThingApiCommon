@@ -1,4 +1,4 @@
-package ru.pobopo.smartthing.model;
+package ru.pobopo.smartthing.consumers;
 
 import ru.pobopo.smartthing.model.stomp.GatewayNotification;
 
