@@ -1,10 +1,8 @@
 package ru.pobopo.smartthing.consumers;
 
-import ru.pobopo.smartthing.model.gateway.dashboard.DashboardGroup;
-import ru.pobopo.smartthing.model.gateway.dashboard.DashboardObservableValueUpdate;
+import ru.pobopo.smartthing.model.gateway.dashboard.DashboardValuesUpdate;
 
-import java.util.List;
+import java.util.function.Consumer;
 
-public interface DashboardUpdatesConsumer {
-    void consume(DashboardGroup group, List<DashboardObservableValueUpdate> updates);
+public interface DashboardUpdatesConsumer extends Consumer<DashboardValuesUpdate> {
 }

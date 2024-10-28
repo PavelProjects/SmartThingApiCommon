@@ -2,6 +2,7 @@ package ru.pobopo.smartthing.consumers;
 
 import ru.pobopo.smartthing.model.DeviceNotification;
 
-public interface DeviceNotificationConsumer {
-    void consume(DeviceNotification notification);
+import java.util.function.Consumer;
+
+public interface DeviceNotificationConsumer extends Consumer<DeviceNotification> {
 }
