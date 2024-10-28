@@ -1,10 +1,12 @@
-package ru.pobopo.smartthing.model;
+package ru.pobopo.smartthing.model.stomp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.pobopo.smartthing.model.DeviceInfo;
+import ru.pobopo.smartthing.model.Notification;
 
 import java.time.LocalDateTime;
 

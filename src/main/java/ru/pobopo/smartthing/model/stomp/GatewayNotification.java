@@ -1,19 +1,10 @@
 package ru.pobopo.smartthing.model.stomp;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import ru.pobopo.smartthing.model.DeviceInfo;
+import lombok.*;
 import ru.pobopo.smartthing.model.GatewayInfo;
-import ru.pobopo.smartthing.model.Notification;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-public class GatewayNotification {
+public class GatewayNotification extends DeviceNotification {
     private GatewayInfo gateway;
-    private DeviceInfo device;
-    private Notification notification;
 }
