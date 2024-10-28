@@ -7,4 +7,12 @@ import ru.pobopo.smartthing.model.GatewayInfo;
 @Data
 public class GatewayNotification extends DeviceNotification {
     private GatewayInfo gateway;
+
+    public GatewayNotification() {
+    }
+
+    public GatewayNotification(DeviceNotification deviceNotification, GatewayInfo gateway) {
+        super(deviceNotification.getDevice(), deviceNotification.getNotification(), deviceNotification.getDateTime());
+        this.gateway = gateway;
+    }
 }
