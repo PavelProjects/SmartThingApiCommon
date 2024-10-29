@@ -12,7 +12,7 @@ public class GatewayNotification extends DeviceNotification {
     }
 
     public GatewayNotification(DeviceNotification deviceNotification, GatewayInfo gateway) {
-        super(deviceNotification.getDevice(), deviceNotification.getNotification(), deviceNotification.getDateTime());
+        super(deviceNotification.getId(), deviceNotification.getDevice(), deviceNotification.getNotification(), deviceNotification.getDateTime());
         this.gateway = gateway;
     }
 }
