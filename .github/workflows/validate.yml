@@ -1,4 +1,4 @@
-name: Maven package deploy
+name: Validate
 
 on:
   push:
