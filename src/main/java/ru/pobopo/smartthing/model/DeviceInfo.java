@@ -23,6 +23,8 @@ public class DeviceInfo {
     private String type;
     @Schema(description = "Device name")
     private String name;
+    @Schema(description = "SmartThing lib version")
+    private String stVersion;
     @Schema(description = "Firmware version")
     private String version;
 
@@ -36,8 +38,8 @@ public class DeviceInfo {
             return null;
         }
 
-        String[] splited = message.split("[$]");
-        if (splited.length < 4) {
+        String[] splited = message.split("[;]");
+        if (splited.length < 6) {
             return null;
         }
 
@@ -45,11 +47,9 @@ public class DeviceInfo {
         builder.ip(splited[0])
                 .type(splited[1])
                 .name(splited[2])
-                .version(splited[3]);
-        // todo remove after all devices update
-        if (splited.length == 5) {
-            builder.board(splited[4]);
-        }
+                .stVersion(splited[3])
+                .board(splited[4])
+                .version(splited[5]);
         return builder.build();
     }
 }
