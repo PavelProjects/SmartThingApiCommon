@@ -39,7 +39,7 @@ public class DeviceInfo {
         }
 
         String[] splited = message.split("[;]");
-        if (splited.length < 6) {
+        if (splited.length < 5) {
             return null;
         }
 
@@ -48,8 +48,12 @@ public class DeviceInfo {
                 .type(splited[1])
                 .name(splited[2])
                 .stVersion(splited[3])
-                .board(splited[4])
-                .version(splited[5]);
+                .board(splited[4]);
+
+        if (splited.length == 6) {
+            builder.version(splited[5]);
+        }
+
         return builder.build();
     }
 }
